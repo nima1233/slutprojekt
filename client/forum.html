@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles">
+  <title>Forum</title>
+</head>
+
+<body>
+  <div id="divLeft">
+    <div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="forum">Forum</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="aboutus">About Us</a></li>
+        <div class="login-container">
+          <form>
+            <input type="text" placeholder="Username" name="username">
+            <input type="text" placeholder="Password" name="psw">
+            <button id="button1" type="submit">Login</button>
+          </form>
+      </div>
+      </ul>
+    </div>
+  </div>
+  <div id="left">
+    <form method="POST" action="/" id="form">
+      <label>Your name</label><br>
+      <input type="text" name="name" required /> <br>
+      <label>Topic</label><br>
+      <input type="text" name="topic" required> <br>
+      <label>Your message</label><br>
+      <textarea name="message" rows="5" required></textarea> <br>
+      <button onclick="myFunction">Send</button>
+    </form>
+  </div>
+
+  <div id="mid">
+    <h1 id="h1">RULES</h1>
+    <hr>
+    <br>
+    <p>1) Don't be gay<br>
+      2) Use your brain<br>
+    </p>
+  </div>
+
+  <div id="right">
+    <div id="forumDiv">
+      <div id="headerLeft">
+        <h1>NAME</h1>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

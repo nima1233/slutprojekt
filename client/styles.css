@@ -1,0 +1,91 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+li {
+  float: left;
+}
+  
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+  
+li a:hover {
+  background-color: #111;
+}
+
+.login-container {
+  float: right;
+}
+
+.login-container input {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width:150px;
+}
+
+#button1 {
+  float: right;
+  padding: 6px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 20px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+#button1:hover {
+  background: grey;
+}
+
+#form {
+  padding: 15px;
+}
+
+#left {
+    float: left;
+    width: 30%;
+}
+
+#mid {
+  float: left;
+  width: 20%;
+  text-align: center;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  height: 889px;
+}
+
+#right {
+  float: right;
+  width: 45%;
+}
+
+#forumDiv {
+  height: 230px;
+  width: 770px;
+  border: 2px dotted black;
+}
+
+#nameBox1 {
+  width: 33%;
+  height: 230px ;
+  border-right: 2px dotted black;
+}
+

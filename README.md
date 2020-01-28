@@ -1,2 +1,2 @@
-# slutprojekt
-farligt E
+Planering
+Ett forum om datorer med inloggning. Fyra vyer. Förstasidan beskriver vad som gäller i forumet. Andra sidan är själva forumet där man går för att göra ny topic eller skriva kommentarer. Tredje sidan ska ha kontaktinformation till mig. Fjärde sidan är en “about us” som beskriver meningen med sidan. Ska använda modulerna express, body-parser och expressDB. Jag ska använda node JS för back end och jquery som front end. Skall göra sidans utseende först sedan fortsätta med server.js, lösenord och mongoDB.
