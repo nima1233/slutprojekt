@@ -11,6 +11,7 @@ app.get("/", (request, response) => response.sendFile(clientDir + "index.html"))
 app.get("/forum", (request, response) => response.sendFile(clientDir + "forum.html"));
 app.get("/contact", (request, response) => response.sendFile(clientDir + "contact.html"));
 app.get("/aboutus", (request, response) => response.sendFile(clientDir + "aboutus.html"));
+app.get("/createaccount", (request, response) => response.sendFile(clientDir + "createaccount.html"));
 app.get("/styles", (request, response) => response.sendFile(clientDir + "styles.css"));
 
 app.post("/", (request,response) =>

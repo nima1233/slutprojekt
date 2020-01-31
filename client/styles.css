@@ -112,3 +112,15 @@ li a:hover {
   width: 97%;
   height: 75%; 
 }
+
+#accountLink {
+  position: relative;
+  float: right;
+  color: blue;
+  text-decoration-line: underline;
+  margin: 10px;
+  top: 1px;
+  right: 5px;
+  font-size: 20px;
+}
+
