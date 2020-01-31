@@ -83,9 +83,32 @@ li a:hover {
   border: 2px dotted black;
 }
 
-#nameBox1 {
-  width: 33%;
-  height: 230px ;
+#headerLeft {
+  float: left;
+  width: 38%;
   border-right: 2px dotted black;
+  border-bottom: 2px dotted black;
+  text-align: center;
 }
 
+#headerRight {
+  float: right;
+  width: 38%;
+  border-left: 2px dotted black;
+  border-bottom: 2px dotted black;
+  text-align: center;
+}
+
+#headerMid {
+  float: left;
+  width: 23%;
+  border-bottom: 2px dotted black;
+  text-align: center;
+}
+
+#forumMessage {
+  margin: 10px;
+  float: left;
+  width: 97%;
+  height: 75%; 
+}
