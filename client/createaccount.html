@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="styles">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
     <title>Create an account</title>
 </head>
 <body>
-    
+    <div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="forum">Forum</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="aboutus">About Us</a></li>
+            <div class="login-container">
+                <form>
+                  <input type="text" placeholder="Username" name="username">
+                  <input type="password" placeholder="Password" name="psw">
+                  <button id="loginBtn" type="submit">Login</button>
+                </form>
+            </div>
+        <a href="http://localhost:8080/createaccount" id="accountLink">Need an account?</a>
+        </ul>
+    <form method="POST" action="/" id="form">
+        <label>Username</label><br>
+        <input type="text" name="name" required /> <br>
+        <label>Password</label><br>
+        <input type="password" name="password" required> <br>
+        <label>Date of birth (M/D/YYYY)</label><br>
+        <input type="text" id="datepicker" required> <br>
+        <form> <br>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> rly bro?
+        </form>
+        <button id="createAccBtn">Create</button>
+    </form>
 </body>
 </html>

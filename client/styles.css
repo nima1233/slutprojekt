@@ -38,7 +38,7 @@ li a:hover {
   width:150px;
 }
 
-#button1 {
+#loginBtn {
   float: right;
   padding: 6px;
   margin-top: 2%;
@@ -124,3 +124,27 @@ li a:hover {
   font-size: 20px;
 }
 
+#createAccBtn {
+  float: left;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 15px;
+  background: orange;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+}
+
+#postBtn {
+  float: left;
+  padding: 10px;
+  margin-top: 10px;
+  background: orange;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+}
