@@ -1,0 +1,29 @@
+{
+  "name": "slutprojekt",
+  "version": "1.0.0",
+  "description": "Planering\r Ett forum om datorer med inloggning. Fyra vyer. Förstasidan beskriver vad som gäller i forumet. Andra sidan är själva forumet där man går för att göra ny topic eller skriva kommentarer. Tredje sidan ska ha kontaktinformation till mig. Fjärde sidan är en “about us” som beskriver meningen med sidan. Ska använda modulerna express, body-parser och expressDB. Jag ska använda node JS för back end och jquery som front end. Skall göra sidans utseende först sedan fortsätta med server.js, lösenord och mongoDB.",
+  "main": "myModule.js",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.2"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nima1233/slutprojekt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nima1233/slutprojekt/issues"
+  },
+  "homepage": "https://github.com/nima1233/slutprojekt#readme"
+}
