@@ -27,12 +27,10 @@
   </div>
   <div id="left">
     <form method="POST" action="/" id="form">
-      <label>Your name</label><br>
-      <input type="text" name="name" required /> <br>
       <label>Topic</label><br>
       <input type="text" name="topic" required> <br>
       <label>Your message</label><br>
-      <textarea name="message" rows="5" required></textarea> <br>
+      <textarea name="message" rows="7" required>Keep it civil</textarea> <br>
       <button id="postBtn" onclick="myFunction">Post</button>
     </form>
   </div>
@@ -57,63 +55,9 @@
         <h1>MESSAGE</h1>
       </div>
     </div>
-    <div id="forumDiv">
-      <div id="headerLeft">
-        <h1>NAME</h1>
-      </div>
-      <div id="headerRight">
-        <h1>TOPIC</h1>
-      </div>
-      <div id="forumMessage">
-        <h1>MESSAGE</h1>
-      </div>
-    </div>
-    <div id="forumDiv">
-      <div id="headerLeft">
-        <h1>NAME</h1>
-      </div>
-      <div id="headerRight">
-        <h1>TOPIC</h1>
-      </div>
-      <div id="forumMessage">
-        <h1>MESSAGE</h1>
-      </div>
-    </div>
-    <div id="forumDiv">
-      <div id="headerLeft">
-        <h1>NAME</h1>
-      </div>
-      <div id="headerRight">
-        <h1>TOPIC</h1>
-      </div>
-      <div id="forumMessage">
-        <h1>MESSAGE</h1>
-      </div>
-    </div>
-    <div id="forumDiv">
-      <div id="headerLeft">
-        <h1>NAME</h1>
-      </div>
-      <div id="headerRight">
-        <h1>TOPIC</h1>
-      </div>
-      <div id="forumMessage">
-        <h1>MESSAGE</h1>
-      </div>
-    </div>
-    <div id="forumDiv">
-      <div id="headerLeft">
-        <h1>NAME</h1>
-      </div>
-      <div id="headerRight">
-        <h1>TOPIC</h1>
-      </div>
-      <div id="forumMessage">
-        <h1>MESSAGE</h1>
-      </div>
-    </div>
-    <button id="nextPage">Next Page</button>
   </div>
+
+    <button onclick="window.location.href = 'http://localhost:8080/createaccount';" id="nextPage">Next Page</button>
 </body>
 
 </html>
