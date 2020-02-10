@@ -78,39 +78,34 @@ li a:hover {
 }
 
 #forumDiv {
-  height: 230px;
+  height: 100px;
   width: 770px;
   border: 2px dotted black;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #headerLeft {
   float: left;
-  width: 38%;
-  border-right: 2px dotted black;
+  width: 50%;
   border-bottom: 2px dotted black;
   text-align: center;
+  font-size: 12px;
 }
 
 #headerRight {
   float: right;
-  width: 38%;
-  border-left: 2px dotted black;
+  width: 50%;
   border-bottom: 2px dotted black;
   text-align: center;
-}
-
-#headerMid {
-  float: left;
-  width: 23%;
-  border-bottom: 2px dotted black;
-  text-align: center;
+  font-size: 12px;
 }
 
 #forumMessage {
-  margin: 10px;
   float: left;
   width: 97%;
   height: 75%; 
+  font-size: 12px;
 }
 
 #accountLink {
@@ -142,9 +137,26 @@ li a:hover {
   padding: 10px;
   margin-top: 10px;
   background: orange;
-  font-size: 17px;
+  font-size: 20px;
   border: none;
   cursor: pointer;
   height: 50px;
   width: 100px;
+}
+
+#nextPage {
+  float: right;
+  margin-right: 90px;
+  margin-top: 20px;
+  padding: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#prevPage {
+  float: left;
+  margin-top: 20px;
+  padding: 5px;
+  font-size: 20px;
+  cursor: pointer;
 }
