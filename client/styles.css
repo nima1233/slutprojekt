@@ -156,6 +156,12 @@ li a:hover {
   width: 100px;
 }
 
+#linkToForum {
+  padding: 1%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .label1 {
   font-size: 25px;
 }

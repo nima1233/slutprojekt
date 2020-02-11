@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const { updateDb } = require("./myModule");
 const { forumPost } = require("./myModule");
 const { accReg } = require("./myModule");
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -33,11 +32,13 @@ app.post("/createaccount", (request,response) =>
     let username=request.body.username;
     let password=request.body.password;
     let dob=request.body.dob;
-    console.log("Username: "+username+" Password: "+password+" Date of birth: "+dob);
-    accReg(username,password,dob, "nima", "account");
+    let gender=request.body.gender;
+    console.log("Username: "+username+" Password: "+password+" Date of birth: "+dob+" Gender: "+gender);
+    accReg(username,password,dob,gender, "nima", "register");
     response.sendFile(clientDir + "accCreated.html");
 });
 
 app.get("*", (request, response) => response.sendFile(clientDir+"error.html"))
+
 
 app.listen(8080);
