@@ -29,19 +29,19 @@
             </div>
         <a href="http://localhost:8080/createaccount" id="accountLink">Need an account?</a>
         </ul>
-    <div id="forumDel">
-        <form method="POST" id="form">
-        <label class="label1">Username (MAX 10 CHARACTERS)</label><br>
-        <input type="text" name="name" maxlength="10" required> <br>
-        <label class="label1">Password</label><br>
-        <input type="password" name="password" required> <br>
-        <label class="label1">Date of birth (MM/DD/YYYY)</label><br>
-        <input type="text" id="datepicker" required> <br>
-    </div>
-            <input class="genderXD" type="radio" name="gender" value="male">Male
-            <input class="genderXD" type="radio" name="gender" value="female">Female
-            <input class="genderXD" type="radio" name="gender" value="other">rly bro?<br>
-        <button id="createAccBtn" type="submit">Create</button>
-    </form>
+        <div id="forumDel">
+        <form method="POST" action="/" id="form">
+            <label class="label1">Username (MAX 18 CHARACTERS)</label><br>
+            <input type="text" name="name" maxlength="18" required> <br>
+            <label class="label1">Password</label><br>
+            <input type="password" name="password" required> <br>
+            <label class="label1">Date of birth (MM/DD/YYYY)</label><br>
+            <input type="text" id="datepicker" required> <br>
+        </div>
+            <input class="genderXD" type="radio" name="gender" value="male" required>Male
+            <input class="genderXD" type="radio" name="gender" value="female" required>Female
+            <input class="genderXD" type="radio" name="gender" value="other" required>rly bro?<br>
+            <button id="createAccBtn" type="submit">Create</button>
+        </form>
 </body>
 </html>
