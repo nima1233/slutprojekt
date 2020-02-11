@@ -2,13 +2,13 @@ var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
 
-exports.updateDb = function (name, topic, message, bas, collection) {
+exports.forumPost = function (username, topic, message, bas, collection) {
   console.log("test")
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     var dbo = db.db(bas);
     /*var query = { topic: `${topic}` };*/
-    var myobj = { name: `${name}`, topic: `${topic}`, message: `${message}` };
+    var myobj = { username: `${username}`, topic: `${topic}`, message: `${message}` };
     dbo.collection(collection).insertOne(myobj, function (err, res) {
       if (err) throw err;
       console.log("1 document inserted");
@@ -18,7 +18,7 @@ exports.updateDb = function (name, topic, message, bas, collection) {
   );
 };
 
-exports.updateDb = function (username, password, dob, bas, collection) {
+exports.accReg = function (username, password, dob, bas, collection) {
   console.log("test")
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;

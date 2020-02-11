@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const { updateDb } = require("./myModule");
+const { forumPost } = require("./myModule");
+const { accReg } = require("./myModule");
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
 
@@ -18,11 +20,11 @@ app.get("/styles", (request, response) => response.sendFile(clientDir + "styles.
 
 app.post("/forum", (request,response) =>
 {
-    let name=request.body.name;
+    let username=request.body.username;
     let topic=request.body.topic;
     let message=request.body.message;
-    console.log("Name: "+name+" Topic: "+topic+" Message: "+message);
-    updateDb(name,topic,message, "nima", "posts");
+    console.log("Username: "+username+" Topic: "+topic+" Message: "+message);
+    forumPost(username,topic,message, "nima", "posts");
     response.sendFile(clientDir + "forumPosted.html");
 });
 
@@ -32,7 +34,7 @@ app.post("/createaccount", (request,response) =>
     let password=request.body.password;
     let dob=request.body.dob;
     console.log("Username: "+username+" Password: "+password+" Date of birth: "+dob);
-    updateDb(username,password,dob, "nima", "account");
+    accReg(username,password,dob, "nima", "account");
     response.sendFile(clientDir + "accCreated.html");
 });
 

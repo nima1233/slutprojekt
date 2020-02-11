@@ -92,27 +92,32 @@ li a:hover {
   margin-bottom: 10px;
 }
 
-#headerLeft {
+#headerUser {
   float: left;
-  width: 50%;
+  width: 60%;
+  height: 49%;
   border-bottom: 2px dotted black;
-  text-align: center;
+  border-right: 2px dotted black;
+  text-align: left;
   font-size: 12px;
 }
 
-#headerRight {
-  float: right;
-  width: 50%;
-  border-bottom: 2px dotted black;
-  text-align: center;
+#headerTopic {
+  float: left;
+  width: 60%;
+  height: 49%;
+  border-right: 2px dotted black;
+  text-align: left;
   font-size: 12px;
 }
 
-#forumMessage {
-  float: left;
-  width: 97%;
-  height: 75%; 
-  font-size: 12px;
+#postLink {
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  height: 100px;
+  font-size: 50px;
+  margin-left: 10px;
 }
 
 #accountLink {
@@ -151,23 +156,6 @@ li a:hover {
   width: 100px;
 }
 
-#nextPage {
-  float: right;
-  margin-right: 90px;
-  margin-top: 20px;
-  padding: 5px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#prevPage {
-  float: left;
-  margin-top: 20px;
-  padding: 5px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
 .label1 {
   font-size: 25px;
 }
@@ -179,4 +167,13 @@ li a:hover {
   width: 1cm;
   cursor: pointer;
   vertical-align: middle;
+}
+
+#pageView {
+  float: left;
+  margin: 10px;
+  font-size: 25px;
+  color: black;
+  border: 1px solid black;
+  border-color: black;
 }
