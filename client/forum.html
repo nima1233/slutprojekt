@@ -17,22 +17,24 @@
         <div class="login-container">
           <form>
             <input type="text" placeholder="Username" name="username">
-            <input type="password" placeholder="Password" name="psw">
+            <input type="password" placeholder="Password" name="password">
             <button id="loginBtn" type="submit">Login</button>
           </form>
-      </div>
+        </div>
       <a href="http://localhost:8080/createaccount" id="accountLink">Need an account?</a>
       </ul>
     </div>
   </div>
   <div id="left">
-    <form method="POST" action="/" id="form">
-      <label>Topic</label><br>
-      <input type="text" name="topic" required> <br>
-      <label>Your message</label><br>
-      <textarea name="message" rows="7" required></textarea> <br>
-      <button id="postBtn" onclick="myFunction">Post</button>
-    </form>
+    <div id="forumDel">
+      <form method="POST" action="/" id="form">
+        <label class="label1">Topic</label><br>
+        <input type="text" name="topic" required> <br>
+        <label class="label1">Your message</label><br>
+        <textarea name="message" rows="6" required></textarea> <br>
+        <button id="postBtn">Post</button>
+      </form>
+    </div>
   </div>
 
   <div id="mid">

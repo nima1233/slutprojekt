@@ -38,6 +38,13 @@ li a:hover {
   width:150px;
 }
 
+#forumDel input,textarea {
+  padding: 5px;
+  margin-top: 8px;
+  font-size: 18px;
+  width:300px;
+}
+
 #loginBtn {
   float: right;
   padding: 6px;
@@ -122,14 +129,14 @@ li a:hover {
 #createAccBtn {
   float: left;
   padding: 10px;
-  margin-top: 10px;
-  margin-left: 15px;
+  margin-top: 30px;
+  margin-left: 50px;
   background: orange;
-  font-size: 20px;
+  font-size: 55px;
   border: none;
   cursor: pointer;
-  height: 50px;
-  width: 100px;
+  height: 200px;
+  width: 350px;
 }
 
 #postBtn {
@@ -159,4 +166,17 @@ li a:hover {
   padding: 5px;
   font-size: 20px;
   cursor: pointer;
+}
+
+.label1 {
+  font-size: 25px;
+}
+
+.genderXD {
+  margin-left: 30px;
+  margin-top: 5px;
+  height: 1cm;
+  width: 1cm;
+  cursor: pointer;
+  vertical-align: middle;
 }

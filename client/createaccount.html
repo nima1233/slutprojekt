@@ -29,18 +29,18 @@
             </div>
         <a href="http://localhost:8080/createaccount" id="accountLink">Need an account?</a>
         </ul>
-    <form method="POST" action="/register" id="form">
-        <label>Username</label><br>
-        <input type="text" name="name" required> <br>
-        <label>Password</label><br>
+    <div id="forumDel">
+        <form method="POST" id="form">
+        <label class="label1">Username (MAX 10 CHARACTERS)</label><br>
+        <input type="text" name="name" maxlength="10" required> <br>
+        <label class="label1">Password</label><br>
         <input type="password" name="password" required> <br>
-        <label>Date of birth (MM/DD/YYYY)</label><br>
+        <label class="label1">Date of birth (MM/DD/YYYY)</label><br>
         <input type="text" id="datepicker" required> <br>
-        <form> <br>
-            <input type="radio" name="gender" value="male"> Male<br>
-            <input type="radio" name="gender" value="female"> Female<br>
-            <input type="radio" name="gender" value="other"> rly bro?
-        </form>
+    </div>
+            <input class="genderXD" type="radio" name="gender" value="male">Male
+            <input class="genderXD" type="radio" name="gender" value="female">Female
+            <input class="genderXD" type="radio" name="gender" value="other">rly bro?<br>
         <button id="createAccBtn" type="submit">Create</button>
     </form>
 </body>
