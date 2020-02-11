@@ -12,16 +12,28 @@ app.get("/forum", (request, response) => response.sendFile(clientDir + "forum.ht
 app.get("/contact", (request, response) => response.sendFile(clientDir + "contact.html"));
 app.get("/aboutus", (request, response) => response.sendFile(clientDir + "aboutus.html"));
 app.get("/createaccount", (request, response) => response.sendFile(clientDir + "createaccount.html"));
+app.get("/forumPosted", (request, response) => response.sendFile(clientDir + "forumPosted.html"));
+app.get("/accCreated", (request, response) => response.sendFile(clientDir + "accCreated.html"));
 app.get("/styles", (request, response) => response.sendFile(clientDir + "styles.css"));
 
-app.post("/", (request,response) =>
+app.post("/forum", (request,response) =>
 {
     let name=request.body.name;
     let topic=request.body.topic;
     let message=request.body.message;
     console.log("Name: "+name+" Topic: "+topic+" Message: "+message);
-    updateDb(topic,name,message, "nima", "WESWEB");
-    response.sendFile(clientDir + "index.html");
+    updateDb(name,topic,message, "nima", "posts");
+    response.sendFile(clientDir + "forumPosted.html");
+});
+
+app.post("/createaccount", (request,response) =>
+{
+    let username=request.body.username;
+    let password=request.body.password;
+    let dob=request.body.dob;
+    console.log("Username: "+username+" Password: "+password+" Date of birth: "+dob);
+    updateDb(username,password,dob, "nima", "account");
+    response.sendFile(clientDir + "accCreated.html");
 });
 
 app.get("*", (request, response) => response.sendFile(clientDir+"error.html"))
