@@ -26,43 +26,21 @@ li a:hover {
   background-color: #111;
 }
 
-.login-container {
-  float: right;
-}
-
-.login-container input {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-  width:150px;
-}
-
-#forumDel input,textarea {
+.formDel input,textarea {
   padding: 5px;
   margin-top: 8px;
+  margin-left: 10px;
   font-size: 18px;
   width:300px;
 }
 
-#loginBtn {
-  float: right;
-  padding: 6px;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-right: 20px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
+.form {
+  padding: 15px;
+  margin-left: 50px;
 }
 
 #button1:hover {
   background: grey;
-}
-
-#form {
-  padding: 15px;
 }
 
 #left {
@@ -126,16 +104,30 @@ li a:hover {
   color: white;
   text-decoration-line: underline;
   margin: 10px;
-  top: 1px;
-  right: 5px;
   font-size: 20px;
+  letter-spacing: 3px;
+  top: 1px;
+  margin-right: 80px;
 }
 
-#createAccBtn {
+#logIn {
+  position: relative;
+  float: right;
+  color: white;
+  text-decoration: underline;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-right: 80px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  top: 1px;
+}
+
+.accountBtn {
   float: left;
   padding: 10px;
   margin-top: 30px;
-  margin-left: 50px;
+  margin-left: 60px;
   background: orange;
   font-size: 55px;
   border: none;
@@ -167,7 +159,7 @@ li a:hover {
 }
 
 .genderXD {
-  margin-left: 30px;
+  margin-left: 70px;
   margin-top: 5px;
   height: 1cm;
   width: 1cm;
@@ -182,4 +174,9 @@ li a:hover {
   color: black;
   border: 1px solid black;
   border-color: black;
+}
+
+.registerOrLoginText {
+  margin-left: 25px;
+  margin-top: 25px;
 }

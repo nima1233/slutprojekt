@@ -10,24 +10,19 @@
   <div id="divLeft">
     <div>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="forum">Forum</a></li>
-        <li><a href="contact">Contact</a></li>
-        <li><a href="aboutus">About Us</a></li>
-        <div class="login-container">
-          <form>
-            <input type="text" placeholder="Username" name="username">
-            <input type="password" placeholder="Password" name="password">
-            <button id="loginBtn" type="submit">Login</button>
-          </form>
-        </div>
-      <a href="http://localhost:8080/createaccount" id="accountLink">Need an account?</a>
+          <li><a href="/">Home</a></li>
+          <li><a href="forum">Forum</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="aboutme">About me</a></li>
+          <a href="http://localhost:8080/register" id="accountLink">Need an account?</a>
+          <a href="http://localhost:8080/login" id="logIn">Login</a>
       </ul>
+  </div>
     </div>
   </div>
   <div id="left">
-    <div id="forumDel">
-      <form method="POST" action="/forum" id="form">
+    <div class="formDel">
+      <form method="POST" action="/forum" class="form">
         <label for="topic" class="label1">Topic (MAX 50 CHARACTERS</label><br>
         <input type="text" name="topic" maxlength="50" required> <br>
         <label for="message" class="label1">Your message</label><br>

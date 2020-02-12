@@ -11,7 +11,7 @@
       $( "#datepicker" ).datepicker();
     } );
     </script>
-    <title>Create an account</title>
+    <title>Register</title>
 </head>
 <body>
     <div>
@@ -19,18 +19,14 @@
             <li><a href="/">Home</a></li>
             <li><a href="forum">Forum</a></li>
             <li><a href="contact">Contact</a></li>
-            <li><a href="aboutus">About Us</a></li>
-            <div class="login-container">
-                <form>
-                  <input type="text" placeholder="Username" name="username">
-                  <input type="password" placeholder="Password" name="psw">
-                  <button id="loginBtn" type="submit">Login</button>
-                </form>
-            </div>
-        <a href="http://localhost:8080/createaccount" id="accountLink">Need an account?</a>
+            <li><a href="aboutme">About me</a></li>
+            <a href="http://localhost:8080/register" id="accountLink">Need an account?</a>
+            <a href="http://localhost:8080/login" id="logIn">Login</a>
         </ul>
-        <div id="forumDel">
-        <form method="POST" action="/createaccount" id="form">
+    </div>
+        <h1 class="registerOrLoginText">REGISTER</h1>
+        <div class="formDel">
+        <form method="POST" action="/register" class="form">
             <label class="label1" name="username">Username (MAX 18 CHARACTERS)</label><br>
             <input type="text" name="username" maxlength="18" required> <br>
             <label class="label1">Password</label><br>
@@ -41,7 +37,7 @@
             <input class="genderXD" type="radio" name="gender" value="male" required>Male
             <input class="genderXD" type="radio" name="gender" value="female" required>Female
             <input class="genderXD" type="radio" name="gender" value="other" required>rly bro?<br>
-            <button id="createAccBtn">Create</button>
+            <button class="accountBtn">Register</button>
         </form>
 </body>
 </html>

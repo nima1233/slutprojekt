@@ -11,8 +11,9 @@ const clientDir = __dirname + "\\client\\";
 app.get("/", (request, response) => response.sendFile(clientDir + "index.html"));
 app.get("/forum", (request, response) => response.sendFile(clientDir + "forum.html"));
 app.get("/contact", (request, response) => response.sendFile(clientDir + "contact.html"));
-app.get("/aboutus", (request, response) => response.sendFile(clientDir + "aboutus.html"));
-app.get("/createaccount", (request, response) => response.sendFile(clientDir + "createaccount.html"));
+app.get("/aboutme", (request, response) => response.sendFile(clientDir + "aboutme.html"));
+app.get("/register", (request, response) => response.sendFile(clientDir + "register.html"));
+app.get("/login", (request, response) => response.sendFile(clientDir + "login.html"));
 app.get("/forumPosted", (request, response) => response.sendFile(clientDir + "forumPosted.html"));
 app.get("/accCreated", (request, response) => response.sendFile(clientDir + "accCreated.html"));
 app.get("/styles", (request, response) => response.sendFile(clientDir + "styles.css"));
@@ -27,7 +28,7 @@ app.post("/forum", (request,response) =>
     response.sendFile(clientDir + "forumPosted.html");
 });
 
-app.post("/createaccount", (request,response) =>
+app.post("/register", (request,response) =>
 {
     let username=request.body.username;
     let password=request.body.password;
