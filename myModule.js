@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var MongoClient = require('mongodb').MongoClient;
 var assert = require("assert");
-var url = "mongodb://localhost:27017/nima";
+var url = "mongodb://localhost:27017/";
 
 
 exports.forumPost = function (username, topic, message, bas, collection) {
