@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
+    <title>Register</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="forum">Forum</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="aboutme">About me</a></li>
+            <a href="http://localhost:8080/register" id="accountLink">Need an account?</a>
+            <a href="http://localhost:8080/login" id="logIn">Login</a>
+        </ul>
+    </div>
+        <h1 class="registerOrLoginText">REGISTER</h1>
+        <div class="formDel">
+        <form method="POST" action="/register" class="form">
+            <label class="label1" name="username">Username (MAX 18 CHARACTERS)</label><br>
+            <input type="text" name="username" maxlength="18" required> <br>
+            <label class="label1">Password</label><br>
+            <input type="password" name="password" required> <br>
+            <label class="label1" name="password">Date of birth (MM/DD/YYYY)</label><br>
+            <input type="text" name="dob" id="datepicker" required> <br>
+        </div>
+            <input class="genderXD" type="radio" name="gender" value="male" required>Male
+            <input class="genderXD" type="radio" name="gender" value="female" required>Female
+            <input class="genderXD" type="radio" name="gender" value="other" required>rly bro?<br>
+            <button class="accountBtn">Register</button>
+        </form>
+</body>
+</html>

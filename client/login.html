@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles">
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="forum">Forum</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="aboutme">About me</a></li>
+        
+            <a href="http://localhost:8080/register" id="accountLink">Need an account?</a>
+            <a href="http://localhost:8080/login" id="logIn">Login</a>
+        </ul>
+    </div>
+    <h1 class="registerOrLoginText">LOGIN</h1>
+    <div class="formDel">
+    <form method="POST" action="/login" class="form">
+        <label class="label1" name="username">Username (MAX 18 CHARACTERS)</label><br>
+        <input type="text" name="username" maxlength="18" required> <br>
+        <label class="label1">Password</label><br>
+        <input type="password" name="password" required> <br>
+    </div>
+        <button class="accountBtn">LOGIN</button>
+    </form>
+</body>
+</html>

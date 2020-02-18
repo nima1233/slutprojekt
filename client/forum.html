@@ -10,29 +10,26 @@
   <div id="divLeft">
     <div>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="forum">Forum</a></li>
-        <li><a href="contact">Contact</a></li>
-        <li><a href="aboutus">About Us</a></li>
-        <div class="login-container">
-          <form>
-            <input type="text" placeholder="Username" name="username">
-            <input type="password" placeholder="Password" name="psw">
-            <button id="loginBtn" type="submit">Login</button>
-          </form>
-      </div>
-      <a href="http://localhost:8080/createaccount" id="accountLink">Need an account?</a>
+          <li><a href="/">Home</a></li>
+          <li><a href="forum">Forum</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="aboutme">About me</a></li>
+          <a href="http://localhost:8080/register" id="accountLink">Need an account?</a>
+          <a href="http://localhost:8080/login" id="logIn">Login</a>
       </ul>
+  </div>
     </div>
   </div>
   <div id="left">
-    <form method="POST" action="/" id="form">
-      <label>Topic</label><br>
-      <input type="text" name="topic" required> <br>
-      <label>Your message</label><br>
-      <textarea name="message" rows="7" required>Keep it civil</textarea> <br>
-      <button id="postBtn">Post</button>
-    </form>
+    <div class="formDel">
+      <form method="POST" action="/forum" class="form">
+        <label for="topic" class="label1">Topic (MAX 50 CHARACTERS</label><br>
+        <input type="text" name="topic" maxlength="50" required> <br>
+        <label for="message" class="label1">Your message</label><br>
+        <textarea name="message" rows="6" required></textarea> <br>
+        <button id="postBtn">Post</button>
+      </form>
+    </div>
   </div>
 
   <div id="mid">
@@ -45,19 +42,15 @@
 
   <div id="right">
     <div id="forumDiv">
-      <div id="headerLeft">
-        <h1>NAME</h1>
+      <div id="headerUser">
+        <h1>USER:</h1>
       </div>
-      <div id="headerRight">
-        <h1>TOPIC</h1>
+      <div id="headerTopic">
+        <h1>TOPIC:</h1>
       </div>
-      <div id="forumMessage">
-        <h1>MESSAGE</h1>
-      </div>
+      <a href="http://localhost:8080/aboutus" id="postLink">GO TO POST</a>
     </div>
   </div>
 
-    <button onclick="window.location.href = 'http://localhost:8080/createaccount';" id="nextPage">Next Page</button>
 </body>
-
 </html>
