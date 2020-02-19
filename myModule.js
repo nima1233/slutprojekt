@@ -4,9 +4,9 @@ const url = "mongodb://localhost:27017/nima";
 mongoose.connect(url);
 
 var postSchema = new Schema({
-  dbname: String,
-  dbtopic: String,
-  dbmessage: String
+  name: String,
+  topic: String,
+  message: String
 });
 
 var regSchema = new Schema({
@@ -17,9 +17,9 @@ var regSchema = new Schema({
 });
 
 
-exports.forumPost = function (name, topic, message){
+exports.forumPost = function (name, topic, message) {
   var Post = mongoose.model('Post', postSchema)
-  var post = new Post({dbname: name, dbtopic: topic, dbmessage: message})
+  var post = new Post({name: name, topic: topic, message: message})
   post.save()
   console.log("Post Made!")
 };
@@ -30,7 +30,7 @@ exports.getTopics = function () {
   return posts;
 };
 
-exports.accReg = function (name, password, dob, gender){
+exports.accReg = function (name, password, dob, gender) {
   var Acc = mongoose.model('Acc', regSchema)
   var acc = new Acc({name: name, password: password, dob: dob, gender: gender})
   acc.save()
