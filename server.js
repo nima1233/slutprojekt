@@ -20,9 +20,9 @@ app.get("/styles", (request, response) => response.sendFile(clientDir + "styles.
 
 app.post("/forum", (request,response) =>
 {
-    name=request.body.name;
-    topic=request.body.topic;
-    message=request.body.message;
+    let name=request.body.name;
+    let topic=request.body.topic;
+    let message=request.body.message;
     console.log("Username: "+name+" Topic: "+topic+" Message: "+message);
     forumPost(name,topic,message);
     response.sendFile(clientDir + "forumPosted.html");
@@ -30,12 +30,12 @@ app.post("/forum", (request,response) =>
 
 app.post("/register", (request,response) =>
 {
-    let username=request.body.username;
+    let name=request.body.name;
     let password=request.body.password;
     let dob=request.body.dob;
     let gender=request.body.gender;
-    console.log("Username: "+username+" Password: "+password+" Date of birth: "+dob+" Gender: "+gender);
-    accReg(username,password,dob,gender, "nima", "register");
+    console.log("Username: "+name+" Password: "+password+" Date of birth: "+dob+" Gender: "+gender);
+    accReg(name,password,dob,gender);
     response.sendFile(clientDir + "accCreated.html");
 });
 

@@ -9,19 +9,38 @@ var postSchema = new Schema({
   dbmessage: String
 });
 
-//
+var regSchema = new Schema({
+  name: String,
+  password: String,
+  dob: String,
+  gender: String
+});
+
 
 exports.forumPost = function (name, topic, message){
   var Post = mongoose.model('Post', postSchema)
   var post = new Post({dbname: name, dbtopic: topic, dbmessage: message})
   post.save()
-  console.log("Griet succsssess!")
+  console.log("Post Made!")
 };
 
 exports.getTopics = function () {
   var Post = mongoose.model('Post', postSchema)
   var posts = Post.find()
   return posts;
+};
+
+exports.accReg = function (name, password, dob, gender){
+  var Acc = mongoose.model('Acc', regSchema)
+  var acc = new Acc({name: name, password: password, dob: dob, gender: gender})
+  acc.save()
+  console.log("Account Registered!")
+};
+
+exports.getAcc = function () {
+  var Acc = mongoose.model('Acc', regSchema)
+  var register = Acc.find()
+  return register;
 };
 
 // exports.forumPost = function (username, topic, message, bas, collection) {
@@ -39,7 +58,7 @@ exports.getTopics = function () {
 //   );
 // };
 
-exports.accReg = function (username, password, dob, gender, bas, collection) {
+/**exports.accReg = function (username, password, dob, gender, bas, collection) {
   console.log("test")
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
@@ -52,4 +71,4 @@ exports.accReg = function (username, password, dob, gender, bas, collection) {
     });
   }
   );
-};
+};*/
