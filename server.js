@@ -20,11 +20,11 @@ app.get("/styles", (request, response) => response.sendFile(clientDir + "styles.
 
 app.post("/forum", (request,response) =>
 {
-    let username=request.body.username;
-    let topic=request.body.topic;
-    let message=request.body.message;
-    console.log("Username: "+username+" Topic: "+topic+" Message: "+message);
-    forumPost(username,topic,message, "nima", "posts");
+    name=request.body.name;
+    topic=request.body.topic;
+    message=request.body.message;
+    console.log("Username: "+name+" Topic: "+topic+" Message: "+message);
+    forumPost(name,topic,message);
     response.sendFile(clientDir + "forumPosted.html");
 });
 
@@ -38,6 +38,13 @@ app.post("/register", (request,response) =>
     accReg(username,password,dob,gender, "nima", "register");
     response.sendFile(clientDir + "accCreated.html");
 });
+
+
+
+
+
+
+
 
 app.get("*", (request, response) => response.sendFile(clientDir+"error.html"))
 
