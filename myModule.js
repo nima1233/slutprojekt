@@ -1,8 +1,8 @@
-var express = require("express");
-var app = express();
-var MongoClient = require('mongodb').MongoClient;
-var assert = require("assert");
-var url = "mongodb://localhost:27017/";
+const express = require("express");
+const app = express();
+const mongoose = require('mongoose');
+const assert = require("assert");
+const url = "mongodb://localhost:27017/";
 
 
 exports.forumPost = function (username, topic, message, bas, collection) {
