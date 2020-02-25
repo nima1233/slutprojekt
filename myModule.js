@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const url = "mongodb://localhost:27017/nima";
-mongoose.connect(url);
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var postSchema = new Schema({
   name: String,
@@ -18,7 +18,7 @@ var userSchema = new Schema({
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+// module.exports = User;
 
 exports.forumPost = function (name, topic, message) {
   var Post = mongoose.model('Post', postSchema)

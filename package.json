@@ -4,10 +4,15 @@
   "description": "Planering\r Ett forum om datorer med inloggning. Fyra vyer. Förstasidan beskriver vad som gäller i forumet. Andra sidan är själva forumet där man går för att göra ny topic eller skriva kommentarer. Tredje sidan ska ha kontaktinformation till mig. Fjärde sidan är en “about us” som beskriver meningen med sidan. Ska använda modulerna express, body-parser och expressDB. Jag ska använda node JS för back end och jquery som front end. Skall göra sidans utseende först sedan fortsätta med server.js, lösenord och mongoDB.",
   "main": "myModule.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "mongodb": "^3.5.2",
-    "mongoose": "^5.9.1"
+    "mongoose": "^5.9.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",

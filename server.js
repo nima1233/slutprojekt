@@ -1,11 +1,15 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-//const passport = require('passport');
-const { forumPost } = require("./myModule");
-const { accReg } = require("./myModule");
+const passport = require('passport');
+const myModule = require("./myModule");
+// const { accReg } = require("./myModule");
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
+const db = require('./config/keys').mongoURI;
+const session = require('express-session');
+const flash = require('connect-flash');
+require('./config/passport')(passport);
 
 const clientDir = __dirname + "\\client\\";
 
@@ -19,14 +23,27 @@ app.get("/forumPosted", (request, response) => response.sendFile(clientDir + "fo
 app.get("/accCreated", (request, response) => response.sendFile(clientDir + "accCreated.html"));
 app.get("/styles", (request, response) => response.sendFile(clientDir + "styles.css"));
 
+app.use(
+    session({
+        secret: 'secret',
+        resave: true,
+        saveUninitialized: true
+    })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(flash());
+
 app.post("/forum", (request,response) =>
 {
     let name=request.body.name;
     let topic=request.body.topic;
     let message=request.body.message;
     console.log("Username: "+name+" Topic: "+topic+" Message: "+message);
-    forumPost(name,topic,message);
-    response.sendFile(clientDir + "forumPosted.html");
+    myModule.forumPost(name,topic,message);
+    response.redirect('/forumPosted');
 });
 
 app.post("/register", (request,response) =>
@@ -36,7 +53,7 @@ app.post("/register", (request,response) =>
     let dob=request.body.dob;
     let gender=request.body.gender;
     console.log("Username: "+name+" Password: "+password+" Date of birth: "+dob+" Gender: "+gender);
-    accReg(name,password,dob,gender);
+    myModule.accReg(name,password,dob,gender);
     response.sendFile(clientDir + "accCreated.html");
 });
 
