@@ -12,7 +12,7 @@ var postSchema = new Schema({
 var regSchema = new Schema({
   name: String,
   password: String,
-  dob: String,
+  dob: Date,
   gender: String
 });
 
