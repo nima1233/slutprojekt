@@ -16,9 +16,7 @@ var userSchema = new Schema({
   gender: String
 });
 
-const User = mongoose.model('User', userSchema);
-
-// module.exports = User;
+const name = mongoose.model('name', userSchema);
 
 exports.forumPost = function (name, topic, message) {
   var Post = mongoose.model('Post', postSchema)

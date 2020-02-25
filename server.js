@@ -3,7 +3,6 @@ const app = express();
 const bodyParser = require("body-parser");
 const passport = require('passport');
 const myModule = require("./myModule");
-// const { accReg } = require("./myModule");
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
 const db = require('./config/keys').mongoURI;
@@ -19,6 +18,7 @@ app.get("/contact", (request, response) => response.sendFile(clientDir + "contac
 app.get("/aboutme", (request, response) => response.sendFile(clientDir + "aboutme.html"));
 app.get("/register", (request, response) => response.sendFile(clientDir + "register.html"));
 app.get("/login", (request, response) => response.sendFile(clientDir + "login.html"));
+app.get("/logout", (request, response) => response.sendFile(clientDir + "logout.html"));
 app.get("/forumPosted", (request, response) => response.sendFile(clientDir + "forumPosted.html"));
 app.get("/accCreated", (request, response) => response.sendFile(clientDir + "accCreated.html"));
 app.get("/styles", (request, response) => response.sendFile(clientDir + "styles.css"));
