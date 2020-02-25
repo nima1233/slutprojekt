@@ -9,13 +9,16 @@ var postSchema = new Schema({
   message: String
 });
 
-var regSchema = new Schema({
+var userSchema = new Schema({
   name: String,
   password: String,
   dob: Date,
   gender: String
 });
 
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
 
 exports.forumPost = function (name, topic, message) {
   var Post = mongoose.model('Post', postSchema)
@@ -31,14 +34,14 @@ exports.getTopics = function () {
 };
 
 exports.accReg = function (name, password, dob, gender) {
-  var Acc = mongoose.model('Acc', regSchema)
+  var Acc = mongoose.model('Acc', userSchema)
   var acc = new Acc({name: name, password: password, dob: dob, gender: gender})
   acc.save()
   console.log("Account Registered!")
 };
 
 exports.getAcc = function () {
-  var Acc = mongoose.model('Acc', regSchema)
+  var Acc = mongoose.model('Acc', userSchema)
   var register = Acc.find()
   return register;
 };
