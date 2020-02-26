@@ -1,15 +1,18 @@
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
+const mongoose = require('mongoose');
+const url = "mongodb://localhost:27017/nima";
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Load User model
-const name = require('../myModule');
+
 
 module.exports = function(passport) {
   passport.use(
-    new LocalStrategy({ usernameField: 'name' }, (name, password, done) => {
+    new LocalStrategy({ usernameField: 'name' }, (uName, password, done) => {
       // Match user
       User.findOne({
-        name: name
+        name: uName
       }).then(user => {
         if (!user) {
           return done(null, false, { message: 'That name is not registered' });
@@ -28,13 +31,13 @@ module.exports = function(passport) {
     })
   );
 
-  passport.serializeUser(function(user, done) {
-    done(null, user.id);
+  passport.serializeUser(function(name, done) {
+    done(null, name.id);
   });
 
   passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
-      done(err, user);
+    name.findById(id, function(err, name) {
+      done(err, name);
     });
   });
 };

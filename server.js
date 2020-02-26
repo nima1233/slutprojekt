@@ -3,8 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const passport = require('passport');
 const myModule = require("./myModule");
-app.use(bodyParser.urlencoded({ extended: false}));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
 const db = require('./config/keys').mongoURI;
 const session = require('express-session');
 const flash = require('connect-flash');
@@ -57,7 +57,20 @@ app.post("/register", (request,response) =>
     response.sendFile(clientDir + "accCreated.html");
 });
 
-
+app.post("/login", (request,response) =>
+{
+    let name=request.body.name;
+    let password=request.body.password;
+    let dob=request.body.dob;
+    let gender=request.body.gender;
+    console.log("Username: "+name+" Password: "+password+" Date of birth: "+dob+" Gender: "+gender);
+    let storedUser = myModule.getAcc(name);
+    if(storedUser.password === password){
+        console.log("Success")
+        response.redirect('/forum')
+    }
+    console.log('failed')
+});
 
 
 

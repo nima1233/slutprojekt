@@ -16,31 +16,31 @@ var userSchema = new Schema({
   gender: String
 });
 
-const name = mongoose.model('name', userSchema);
+const User = mongoose.model('User', userSchema);
+const Post = mongoose.model('Post', postSchema);
 
 exports.forumPost = function (name, topic, message) {
-  var Post = mongoose.model('Post', postSchema)
   var post = new Post({name: name, topic: topic, message: message})
   post.save()
   console.log("Post Made!")
 };
 
 exports.getTopics = function () {
-  var Post = mongoose.model('Post', postSchema)
   var posts = Post.find()
   return posts;
 };
 
 exports.accReg = function (name, password, dob, gender) {
-  var Acc = mongoose.model('Acc', userSchema)
-  var acc = new Acc({name: name, password: password, dob: dob, gender: gender})
+  var acc = new User({name: name, password: password, dob: dob, gender: gender})
   acc.save()
   console.log("Account Registered!")
 };
 
-exports.getAcc = function () {
-  var Acc = mongoose.model('Acc', userSchema)
-  var register = Acc.find()
+exports.getAcc = function (uName) {
+  console.log(uName)
+  var register = User.findOne({name: uName})
+  console.log(register);
+  
   return register;
 };
 

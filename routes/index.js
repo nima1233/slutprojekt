@@ -10,3 +10,5 @@ app.get('/forum', ensureAuthenticated, (req, res) =>
         user: req.user
     })
 );
+
+module.exports = router;
