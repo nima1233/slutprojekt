@@ -54,22 +54,22 @@ app.post("/register", (request,response) =>
     let gender=request.body.gender;
     console.log("Username: "+name+" Password: "+password+" Date of birth: "+dob+" Gender: "+gender);
     myModule.accReg(name,password,dob,gender);
-    response.sendFile(clientDir + "accCreated.html");
+    response.redirect('/accCreated');
 });
 
 app.post("/login", (request,response) =>
 {
     let name=request.body.name;
     let password=request.body.password;
-    let dob=request.body.dob;
-    let gender=request.body.gender;
-    console.log("Username: "+name+" Password: "+password+" Date of birth: "+dob+" Gender: "+gender);
+    console.log("Username: "+name+" Password: "+password);
     let storedUser = myModule.getAcc(name);
     if(storedUser.password === password){
         console.log("Success")
         response.redirect('/forum')
-    }
+    } else {
     console.log('failed')
+    response.redirect('/login')
+    }
 });
 
 

@@ -40,7 +40,6 @@ exports.getAcc = function (uName) {
   console.log(uName)
   var register = User.findOne({name: uName})
   console.log(register);
-  
   return register;
 };
 
