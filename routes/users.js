@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
-const name = require('../myModule');
+const User = require('../models/Users');
 const { forwardAuthenticated } = require('../config/auth');
 
 router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
@@ -10,7 +10,7 @@ router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 router.get('/register', forwardAuthenticated, (req, res) => res.render('register'));
 
 router.post('/register', (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, password } = req.body;
     let errors = [];
 
     if (!name || !password || !dob || !gender) {
@@ -22,7 +22,8 @@ router.post('/register', (req, res) => {
             errors,
             name,
             password,
-            dob
+            dob,
+            gender
         });
     } else {
         name.findOne({ name: name }).then(user => {

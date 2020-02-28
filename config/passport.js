@@ -1,10 +1,5 @@
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
-const mongoose = require('mongoose');
-const url = "mongodb://localhost:27017/nima";
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Load User model
 
 
 module.exports = function(passport) {
