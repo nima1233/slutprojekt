@@ -13,9 +13,9 @@ router.post('/register', (req, res) => {
     const { name, password } = req.body;
     let errors = [];
 
-    if (!name || !password || !dob || !gender) {
-        errors.push({ msg: 'Please enter all fields' });
-    }
+    // if (!name || !password || !dob || !gender) {
+    //     errors.push({ msg: 'Please enter all fields' });
+    // }
 
     if (errors.length > 0) {
         res.render('register', {
@@ -51,10 +51,10 @@ router.post('/register', (req, res) => {
                         newUser
                           .save()
                           .then(user => {
-                              req.flash(
-                                  'success_msg',
-                                  'You are now registered and can log in'
-                              );
+                            //   req.flash(
+                            //       'success_msg',
+                            //       'You are now registered and can log in'
+                            //   );
                               res.redirect('/login');
                           })
                           .catch(err => console.log(err));
@@ -75,7 +75,6 @@ router.post('/login', (req, res, next) => {
 
 router.get('/logout', (req, res) => {
     req.logout();
-    req.flash('success_msg', 'You are logged out');
     res.redirect('/login');
 });
 

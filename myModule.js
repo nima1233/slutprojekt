@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const url = "mongodb://localhost:27017/nima";
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
-//const User = require('./models/Users');
+const User = require('./models/Users');
 
 var postSchema = new Schema({
   name: String,
@@ -10,14 +10,6 @@ var postSchema = new Schema({
   message: String
 });
 
-var userSchema = new Schema({
-  name: String,
-  password: String,
-  dob: Date,
-  gender: String
-});
-
-const User = mongoose.model('User', userSchema);
 const Post = mongoose.model('Post', postSchema);
 
 exports.forumPost = function (name, topic, message) {

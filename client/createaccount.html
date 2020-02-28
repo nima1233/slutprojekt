@@ -30,12 +30,12 @@
         <a href="http://localhost:8080/createaccount" id="accountLink">Need an account?</a>
         </ul>
     <form method="POST" action="/" id="form">
-        <label>Username</label><br>
+        <label for="name">Username</label><br>
         <input type="text" name="name" required> <br>
-        <label>Password</label><br>
+        <label for="password">Password</label><br>
         <input type="password" name="password" required> <br>
-        <label>Date of birth (MM/DD/YYYY)</label><br>
-        <input type="text" id="datepicker" required> <br>
+        <label for="date">Date of birth (MM/DD/YYYY)</label><br>
+        <input type="text" id="datepicker" name="date" required> <br>
         <form> <br>
             <input type="radio" name="gender" value="male" required> Male<br>
             <input type="radio" name="gender" value="female" required> Female<br>
