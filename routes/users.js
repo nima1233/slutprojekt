@@ -13,7 +13,7 @@ router.post('/register', (req, res) => {
     const { name, email, password } = req.body;
     let errors = [];
 
-    if (!name || !password || !dob) {
+    if (!name || !password || !dob || !gender) {
         errors.push({ msg: 'Please enter all fields' });
     }
 
@@ -32,13 +32,15 @@ router.post('/register', (req, res) => {
                     errors,
                     name,
                     password,
-                    dob
+                    dob,
+                    gender
                 });
             } else {
                 const newUser = new User({
                     name,
                     password,
-                    dob
+                    dob,
+                    gender
                 });
 
                 bcrypt.genSalt(10, (err, salt) => {
